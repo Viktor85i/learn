@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>СПИСКИ(управляем цветами списков по клику)(Примитивная база данных)</title>
+	<script type="text/javascript">
+		/* function clickElemOfList(clickElem) {          //выделение по клику
+				//console.log(clickElem.innerHTML);
+				if(clickElem.className=="select"){
+					clickElem.className="deselect";
+				} else {
+					clickElem.className="select";
+				}
+				
+		}
+		function removeElemOfButton(){                 //Удаление элемента списка кнопкой
+			
+			 elems = list.getElementsByTagName("li");
+			for (var i =elems.length-1;i>=0;i--){
+				if (elems[i].className=="select") {
+					list.removeChild(elems[i]);
+				}
+			}
+			//console.log("test"); 
+			
+		}*/
+		/* function addElement(){                        //Добавление элемента списка
+			//console.log("test");
+			var win = document.getElementById("text").value;
+			console.log(win);
+			 var li = document.createElement("li");
+			li.innerHTML = win;
+			li.addEventListener("click", 
+					function() {
+						clickElemOfList(this); 
+			});
+			list.appendChild(li);
+		
+		} */
+		
+		
+		
+		
+		
+		
+		//Выделяем элементы списка записанные в html
+		/* var list =	document.getElementById("list"); 
+				var elems = list.getElementsByTagName("li"); 
+					//console.log(elems.length);
+					for (var i = 0; i < elems.length; i++) {
+						elems[i].addEventListener("click", 
+								function() {
+									//clickElemOfList(this);
+		              delElem(this);
+		              checkList(this);
+						});
+		 } */
+
+		
+
+		
+
+
+
+		//Выделение по клику
+		/* function clickElemOfList(clickElem) {          
+						//console.log(clickElem.innerHTML);
+						  
+		        if(clickElem.className=="select"){
+							clickElem.className="deselect";
+						} else {
+							clickElem.className="select";
+						}
+				} */
+		//clickElemOfList();
+
+		
+
+
+
+
+
+//1111111111111111111111111111111111111111111111111111111111111111
+
+
+		/*//Добавление нового элемента списка
+		//add.addEventListener("click", addElement);
+		function addElement () {
+		  var win = text.value;
+		  if (win==""){
+		    return false;
+		  }
+		  text.value="";
+		  var li = document.createElement("li");
+		  var input = document.createElement("input");
+		  input.setAttribute('type', 'checkbox');
+		  var a = document.createElement("a");
+		  a.innerHTML="-";
+		  a.setAttribute('class', 'delElemList');
+		  li.innerHTML = win;
+		  li.addEventListener("click", 
+							function() {
+		            //clickElemOfList(this);
+		           // delElem(this);
+		            checkList(this);
+		          });
+		  li.appendChild(input);
+		  li.appendChild(a);
+		  list.appendChild(li);
+		  //Функция зачеркивает добавленный элемент списка при checked checkbox
+		  function checkList(){
+		    if(input.checked==true){
+		      li.style.textDecoration="line-through";
+		    } if (input.checked==false){
+		      li.style.textDecoration="none";
+		    }
+		  }
+		  checkList();
+		 ////////
+				var people;// переменная для обьектов
+	//вызов функции очищения массива people
+	clearPeople();
+	function Human(name, age, money) {//функция для работы с обьектами, конструктор 
+		// наш класс имеет три свойства
+		this.name = name;
+		this.age = age;
+		this.money = money;
+		// в классе есть метод
+		this.output = function() {
+			return this.name + " " + this.age + " " + this.money;
+		}
+	} 
+		///////	 
+		}
+		//Удаляем элемент списка
+		function delElem(){
+			
+			list.onclick = function(event) {
+				var target = event.target;
+			      if (!event.target.classList.contains('delElemList')) 
+			    	  return;
+			      
+			      event.target.parentNode.hidden = !event.target.parentNode.hidden;
+			    }
+		}*/
+		
+
+/////////////////////////////////
+////////////////////////////////
+///////////////////////////////
+//addBut.addEventListener("click",addElement);
+var listT;// переменная для обьектов
+	 
+	clearListT();
+	function ListItem(text) {
+		this.text = text;
+		this.output = function() {
+			return this.text;
+      
+		}
+	}
+
+
+
+						
+
+var controller = {
+  addElem: function(event){
+  event.preventDefault();
+ // console.log(event.target.nameForm1);
+  var newListItem =new ListItem(text.value);
+		//добавляем вновь созданный обьект newListItem в массив listT
+	listT.push(newListItem);
+	var win = text.value;
+		  if (win==""){
+		    return false;
+		  } else {
+       
+      }
+		 //text.value="";
+		//list.innerHTML="";
+		for (var i = 0; i < listT.length; i++) {
+		list.innerHTML+=listT[i].output()+"<br>";
+        listT=[];
+		}
+  
+  }
+}
+ var someForm = document.getElementById("idForm");
+ someForm.addEventListener("submit", controller.addElem);
+function clearListT() {//функции очищения массива listT
+		listT=[];
+	}
+ 
+    
+    
+	
+  
+
+
+
+
+
+/*function addElement() {
+    event.preventDefault();
+    //console.log(someForm.nameForm1);
+    console.log(event.target.form.nameForm2);
+		var newListItem =new ListItem(text.value);
+		//добавляем вновь созданный обьект newListItem в массив listT
+		listT.push(newListItem);
+		
+		 var win = text.value;
+		  if (win==""){
+		    return false;
+		  }
+		 text.value="";
+		//list.innerHTML="";
+		for (var i = 0; i < listT.length; i++) {
+		list.innerHTML+=listT[i].output()+"<br>";
+        listT=[];
+		}
+		
+	}*/
+	
+	
+	
+	
+   
+///////////////////////////////
+//////////////////////////////
+//////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////		
+//////////////////////////////////////////////////////////////////////////////////////		
+		
+		/*//addBut.addEventListener("click",addElement);
+var listT;// переменная для обьектов
+	//вызов функции очищения массива listT
+	clearListT();
+	function ListItem(text) {
+		this.text = text;
+		this.output = function() {
+			return this.text;
+		}
+	}
+
+
+
+var someForm = document.getElementById("idForm");
+someForm.addEventListener("submit", addElement);
+function addElement() {
+    event.preventDefault();
+    //console.log(someForm.nameForm1);
+    console.log(event.target.form.nameForm1);
+		var newListItem =new ListItem(text.value);
+		//добавляем вновь созданный обьект newListItem в массив listT
+		listT.push(newListItem);
+		
+		 var win = text.value;
+		  if (win==""){
+		    return false;
+		  }
+		 text.value="";
+		//list.innerHTML="";
+		for (var i = 0; i < listT.length; i++) {
+		list.innerHTML+=listT[i].output()+"<br>";
+        listT=[];
+		}
+		
+	}
+	
+	function clearListT() {//функции очищения массива listT
+		listT=[];
+	}*/
+		
+	
+		
+	////////////////////////////////////////////////////////////////////////////////////////////////	
+	/////////////////////////////////////////////////////////////////////////////////////////////////	
+		
+		
+		/* function dblclickElemOfList(currentElem) {    // По двойному щелчку вывод в поле выбраного списка
+			text.value=currentElem.innerHTML;// document.getElementById.value=dblclickElem.innerHTML-длинная кострукция
+			editElement=currentElem;   //сохранить ссылку на редактируемый элемент списка
+			
+		}
+		function saveElem(){                       //Сохранение редактируемого элемента
+			console.log(editElement.innerHTML);
+			editElement.innerHTML=text.value;
+		}
+		function keyText() {				//Поиск элемента списка в поисковом поле по буквам
+			//console.log(search.value);    //выводим в консоль текст в поисковом поле
+			var searchText = search.value;
+			elems = list.getElementsByTagName("li");
+			if (searchText=="") {
+				for (var i = 0;i<elems.length;i++){
+					elems[i].style.display="block";
+				}
+			} else {
+				for (var i = 0; i < elems.length; i++) {
+					if(elems[i].innerHTML.indexOf(searchText)!=-1){
+						elems[i].style.display="block";
+					} else {
+						elems[i].style.display="none";
+					}
+				}
+				
+			}
+		} */
+		
+	</script>
+	<style>
+		body{
+	color:#000;
+	background:#FAFAD2;
+}
+.main {
+  margin:0 auto;
+  width: 300px;
+  
+}
+.main-name {
+  text-align:center;
+  padding:5px;
+  border-radius:15px 15px 0 0;
+  background:#00FA9A;
+}
+ul {
+  border:none;
+  margin:0;
+  padding:0;
+  list-style:none;
+  
+}
+li {
+  text-align:center;
+  padding:15px;
+  background:lightgrey;
+  border-bottom:1px solid grey;
+  font-size:18px;
+  margin:0;
+  border:none;
+  z-index:0;
+  overflow:hidden;
+  
+}
+
+.delElemList {
+  
+  text-decoration:none;
+  float:right;
+  background: red;
+  border-radius:50%;
+  margin:0;
+  padding:0;
+  width:20px;
+ }
+a:hover{
+  background:#000;
+  cursor:pointer;
+  color:white;
+ 
+}
+.main input[type="checkbox"] {
+  float:left;
+}
+.main input[type="checkbox"]:checked~span{
+text-decoration: line-through;
+}
+#text,#text1 {
+  padding:15px;
+  font-size:18px;
+  width:270px;
+  border:none;
+  background:#87CEEB;
+}
+#text:hover {
+  background:#1E90FF;
+  color:#fff;
+}
+.but {
+  text-align:center;
+  margin:0 auto;
+  
+}
+#addBut {
+  padding:15px 0;
+  width:300px;
+  background-color: #4169E1;
+  font-size:18px;
+  border:none;
+  border-bottom:1px solid grey;
+}
+#addBut:hover,#del:hover {
+  background:#FFD700;
+  border:none;
+}
+#del {
+  padding:15px 0;
+  width:300px;
+  border-radius: 0 0 15px 15px ;
+  background-color: #4169E1;
+  font-size:18px;
+  border:none;
+}
+/*выделение по клику*/
+.select {
+			background:blue;
+			color:#000;
+      /*text-decoration: line-through;*/
+		}
+.deselect {
+			
+			color:#000;
+      /*text-decoration: none;*/
+		}
+/*------------------*/
+
+
+
+	</style>
+</head>
+
+<body>
+	<div class="main">
+  <div class="main-name">
+    <h3>TO DO LILST</h3> 
+  </div>
+  
+  <div class="main-list">
+    <ul id="list">
+      <li><label><input type="checkbox" checked><span>1.Сходить к доктору </span><a id="dellT" href="#" class="delElemList">-</a></label></li>
+      <li><label><input type="checkbox" ><span>2. Бухнуть пиваса</span><a id="dellT" href="#" class="delElemList">-</a></label></li>
+    </ul>
+  </div>
+  
+  <div>
+    <form id="idForm">
+      <input type="text" name="nameForm1" id="text" placeholder="Введите текст">
+      <input type="text" name="nameForm2" id="text1" placeholder="Виктор"disabled ><br>
+      <input type="submit" id="addBut" value="Добавить" ><br>
+     </form>
+  </div>
+  
+</div>
+
+
+	<script>
+		
+		
+		
+			
+			
+	</script>
+</body>
+</html>
